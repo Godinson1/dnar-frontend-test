@@ -57,10 +57,11 @@
         background-color: transparent;
         font-size: 1rem;
         color: $white-color;
+        width: 100%;
         &::placeholder {
           color: $border-gray;
         }
-        width: 100%;
+
         &:focus {
           outline: none;
         }
@@ -199,4 +200,16 @@
   padding: 2px;
   border-radius: 5px;
   @include flex-center;
+}
+
+.flex {
+  display: flex;
+}
+
+.chart {
+  background-color: $primary-color;
+  padding: 20px;
+  border-radius: 10px;
+  height: 400px;
+  overflow-x: hidden;
 }

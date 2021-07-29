@@ -1,5 +1,5 @@
 import React from "react";
-import { IoLogoGithub } from "react-icons/io5";
+import { IoLogoGithub, IoGlobe, IoLogoReddit } from "react-icons/io5";
 
 import "./styles/analytic.scss";
 
@@ -16,10 +16,14 @@ const InfoCard = () => {
           </div>
         </div>
         <div className="info__links">
-          <div className="link_holder">website x</div>
-          <div className="link_holder">x</div>
           <div className="link_holder">
-            <IoLogoGithub />
+            website &nbsp; <IoGlobe size={25} color="#4b6fe2" />
+          </div>
+          <div className="link_holder">
+            <IoLogoReddit size={25} color="gold" />
+          </div>
+          <div className="link_holder">
+            <IoLogoGithub size={25} />
           </div>
         </div>
         <div className="info__fact">

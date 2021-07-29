@@ -1,4 +1,5 @@
 import React from "react";
+import { MdTrendingFlat } from "react-icons/md";
 
 const Exchange = () => {
   return (
@@ -7,16 +8,25 @@ const Exchange = () => {
         <h3>Exchange</h3>
         <div className="exchange_calc__container">
           <div className="exchange__flex">
-            <div>Sell 6700</div>
+            <div className="exchange__item">
+              Sell &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="price">6700</span>
+            </div>
             <div>USD</div>
           </div>
           <div className="exchange__flex">
-            <div>Buy 0.609898</div>
+            <div className="exchange__item">
+              Buy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span className="price">0.609898</span>
+            </div>
             <div>BTC</div>
           </div>
           <div className="exchange__flex">
-            <div>1 BTC = 8343,43 USD</div>
-            <div>Exchange</div>
+            <div className="exchange__item">1 BTC = 8343,43 USD</div>
+            <div className="exchange__btn">
+              <div>Exchange</div>
+              <MdTrendingFlat size={20} />
+            </div>
           </div>
         </div>
       </div>

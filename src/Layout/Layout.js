@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { MdLineWeight, MdEqualizer } from "react-icons/md";
 import { IoReorderTwo } from "react-icons/io5";
 
@@ -15,7 +15,6 @@ import {
 import "./styles/layout.scss";
 
 const Layout = ({ children }) => {
-  const details = useSelector((state) => state.details);
   const dispatch = useDispatch();
 
   const getMarketLeaders = async () => {
@@ -35,6 +34,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     getCoins();
     getMarketLeaders();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
