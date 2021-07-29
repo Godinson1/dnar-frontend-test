@@ -1,0 +1,35 @@
+@import "./variables";
+
+@mixin font {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+  font-weight: bold;
+}
+
+h1 {
+  @include font;
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
+}
+
+h2 {
+  @include font;
+  font-size: clamp(1.7rem, 1.7vw, 3.3rem);
+  font-weight: 900;
+}
+
+h3 {
+  font-size: clamp(1.7rem, 1.7vw, 3.3rem);
+  @include font;
+}
+
+div {
+  @include font;
+}
+
+p {
+  font-size: Lexend;
+  font-size: clamp(1.3rem, 1.2vw, 3rem);
+  line-height: 25px;
+}

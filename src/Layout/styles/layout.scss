@@ -1,0 +1,199 @@
+@import "../../sass-styles/variables";
+@import "../../sass-styles/mixins";
+@import "../../sass-styles/breakpoints";
+
+.main__layout {
+  background-color: $background-color;
+  width: 100vw;
+  border-left: 1px solid $white-color;
+  border-bottom: 1px solid $white-color;
+  display: flex;
+  padding: 20px;
+  overflow-x: hidden;
+  color: $white-color;
+
+  .sidebar {
+    width: 10vw;
+    height: 100vh;
+    @include flex-start;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    flex-direction: column;
+
+    .toggler {
+      padding: 10px;
+      background-color: $primary-color;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      @include flex-center;
+    }
+
+    .sidebar__container {
+      padding: 15px;
+      border-radius: 15px;
+      background-color: $primary-color;
+      height: 100%;
+    }
+  }
+
+  .main__view {
+    width: 100%;
+    height: 100%;
+    margin-left: 100px;
+
+    .search__container {
+      border: thin solid rgb(49, 48, 48);
+      height: 50px;
+      border-radius: 15px;
+      width: 90%;
+      padding: 5px 5px 5px 10px;
+      @include flex-start-center;
+
+      input {
+        border: none;
+        background-color: transparent;
+        font-size: 1rem;
+        color: $white-color;
+        &::placeholder {
+          color: $border-gray;
+        }
+        width: 100%;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .search__container > * + * {
+      margin: 0 0 0 10px;
+    }
+
+    .main__container {
+      display: flex;
+      width: 100%;
+      margin-top: 10px;
+      .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .content__div {
+          background-color: $primary-color;
+          padding: 20px;
+          border-radius: 10px;
+          height: 270px;
+          overflow-x: hidden;
+        }
+        .content__div > * + * {
+          margin: 10px 0 0 0;
+        }
+
+        .all__coins__container {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 40px;
+          gap: 25px;
+          .coin {
+            padding: 20px;
+            border-radius: 12px;
+            background-color: $secondary-color;
+            @media (max-width: 768px) {
+              width: 100%;
+            }
+          }
+          .coin > * + * {
+            margin: 0 0 0 20px;
+          }
+        }
+
+        .coin__leaders {
+          margin-top: 40px;
+          .coin__container {
+            border-radius: 12px;
+            padding: 20px;
+            background-color: $secondary-color;
+            border-left: 3px solid $border-gray;
+            margin-top: 20px;
+            @include flex-between;
+          }
+        }
+      }
+
+      .content > * + * {
+        margin: 10px 0 0 0;
+      }
+
+      .info {
+        width: 30%;
+        border-radius: 12px;
+        padding: 10px 10px 40px 10px;
+        background-color: $primary-color;
+        @include flex-start;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          margin-top: 10px;
+        }
+
+        .event__container {
+          margin-top: 20px;
+          width: 100%;
+        }
+
+        .event {
+          border-radius: 12px;
+          margin-top: 10px;
+          padding: 10px 5px 5px 10px;
+          width: 100%;
+          background-color: $secondary-color;
+          overflow: hidden;
+
+          .token__text {
+            margin-top: 5px;
+          }
+
+          .link {
+            padding: 5px;
+            width: 30px;
+            right: 0;
+            @include flex-center;
+            float: right;
+            border-radius: 7px;
+            background-color: $link-base-color;
+            color: $link-color;
+          }
+        }
+      }
+    }
+
+    .main__container > * + * {
+      margin: 0 0 0 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 20px;
+    background-color: $light-secondary;
+    color: $white-color;
+    border-radius: 5px;
+    padding: 2px;
+    @include flex-center;
+  }
+
+  .side__link {
+    background-color: red;
+  }
+
+  .text__upper {
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__container {
+    flex-wrap: wrap;
+  }
+}
