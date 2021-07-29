@@ -11,7 +11,7 @@ const Home = () => {
       <div className="main__view">
         <div className="search__container">
           <div>
-            <MdSearch size={20} color="#455cb4" />
+            <MdSearch size={20} color="#4b6fe2" />
           </div>
           <div>
             <input placeholder="search" />

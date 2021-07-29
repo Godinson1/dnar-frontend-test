@@ -5,7 +5,12 @@ import { MdLineWeight, MdEqualizer } from "react-icons/md";
 import { IoReorderTwo } from "react-icons/io5";
 
 import { api } from "../Setup";
-import { setMarketLeaders, setAllCoins } from "../redux";
+import {
+  setMarketLeaders,
+  setAllCoins,
+  setLoading,
+  setSidebarOpen,
+} from "../redux";
 
 import "./styles/layout.scss";
 
@@ -21,8 +26,10 @@ const Layout = ({ children }) => {
   };
 
   const getCoins = async () => {
+    dispatch(setLoading(true));
     const coins = await api.get("/coins/list?per_page=100&page=1");
     dispatch(setAllCoins(coins.data));
+    dispatch(setLoading(false));
   };
 
   useEffect(() => {
@@ -33,17 +40,27 @@ const Layout = ({ children }) => {
   return (
     <div className="main__layout">
       <div className="sidebar">
-        <div className="toggler">
-          <IoReorderTwo size={30} spacing={20} color="#455cb4" />
+        <div className="toggler" onClick={() => setSidebarOpen(true)}>
+          <IoReorderTwo size={30} spacing={20} color="#4b6fe2" />
         </div>
         <div className="sidebar__container">
-          <NavLink activeClassName="side__link" to={"/"}>
-            <div className="icon">
+          <NavLink
+            className="navlink"
+            exact
+            activeClassName="navlink__active"
+            to={"/"}
+          >
+            <div>
               <MdLineWeight size={30} />
             </div>
           </NavLink>
-          <NavLink activeClassName="side__link" to={"/analytic"}>
-            <div className="icon">
+          <br />
+          <NavLink
+            className="navlink"
+            activeClassName="navlink__active"
+            to={"/analytic"}
+          >
+            <div>
               <MdEqualizer size={30} />
             </div>
           </NavLink>

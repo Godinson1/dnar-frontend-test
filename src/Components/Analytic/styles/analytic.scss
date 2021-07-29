@@ -1,0 +1,108 @@
+@import "../../../sass-styles/variables";
+@import "../../../sass-styles/mixins";
+@import "../../../sass-styles/breakpoints";
+
+.info__links {
+  @include flex-center;
+  margin-top: 30px;
+
+  div {
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  div:nth-child(1) {
+    background-color: $link-base-color;
+  }
+
+  div:nth-child(2) {
+    background-color: $link-base-color;
+    margin-left: 10px;
+  }
+
+  div:nth-child(3) {
+    background-color: $light-secondary;
+    margin-left: 10px;
+  }
+}
+
+.info__card__inventory {
+  border-radius: 12px;
+  margin: 10px 0 0 10px;
+  padding: 10px 15px 5px 15px;
+  width: 100%;
+  background-color: $secondary-color;
+  overflow: hidden;
+
+  .info__text {
+    margin: 5px 0 0 5px;
+  }
+
+  .inventory {
+    @include flex-between;
+  }
+
+  .inventory > * + * {
+    margin: 20px 0 0 0;
+  }
+}
+
+.info__card {
+  border-radius: 12px;
+  margin-top: 10px;
+  padding: 10px 10px 5px 20px;
+  width: 100%;
+  background-color: $secondary-color;
+  overflow: hidden;
+
+  .info__text {
+    margin: 5px 0 0 5px;
+  }
+}
+
+.fact__holder {
+  margin-top: 10px;
+}
+
+.fact {
+  @include flex-between;
+  margin-bottom: 20px;
+}
+
+.info__fact {
+  margin: 20px 0 0 10px;
+  .line {
+    width: 95%;
+    margin: 10px;
+    height: 2px;
+    background-color: $light-secondary;
+  }
+}
+
+.exchange {
+  @include flex-start-center;
+  gap: 20px;
+  width: 100%;
+
+  .alexa {
+    width: 300px;
+    max-height: 120px;
+    @include flex-center;
+    flex-direction: column;
+    bottom: 0;
+    margin-top: auto;
+  }
+
+  .exchange_calc {
+    width: 100%;
+  }
+
+  .exchange_calc__container {
+    margin-top: 30px;
+  }
+
+  .exchange__flex {
+    @include flex-between;
+    margin-top: 20px;
+  }
+}

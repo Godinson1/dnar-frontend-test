@@ -176,15 +176,10 @@
 
   .icon {
     margin-bottom: 20px;
-    background-color: $light-secondary;
-    color: $white-color;
-    border-radius: 5px;
-    padding: 2px;
-    @include flex-center;
   }
 
-  .side__link {
-    background-color: red;
+  .navlink {
+    color: $white-color;
   }
 
   .text__upper {
@@ -196,4 +191,12 @@
   .main__container {
     flex-wrap: wrap;
   }
+}
+
+.navlink__active {
+  color: $white-color;
+  background-color: $light-secondary;
+  padding: 2px;
+  border-radius: 5px;
+  @include flex-center;
 }

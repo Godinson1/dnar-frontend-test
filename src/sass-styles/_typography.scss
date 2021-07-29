@@ -27,9 +27,3 @@ h3 {
 div {
   @include font;
 }
-
-p {
-  font-size: Lexend;
-  font-size: clamp(1.3rem, 1.2vw, 3rem);
-  line-height: 25px;
-}

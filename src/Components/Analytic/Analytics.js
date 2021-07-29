@@ -3,7 +3,7 @@ import React from "react";
 import { MdSearch } from "react-icons/md";
 
 import Layout from "../../Layout";
-import { Info, AllCoins, MarketLeaders } from "../../Components";
+import { Chart, InfoCard, Exchange } from "./index";
 
 const Analytics = () => {
   return (
@@ -19,10 +19,10 @@ const Analytics = () => {
         </div>
         <div className="main__container">
           <div className="content">
-            <MarketLeaders />
-            <AllCoins />
+            <Chart />
+            <Exchange />
           </div>
-          <Info />
+          <InfoCard />
         </div>
       </div>
     </Layout>
