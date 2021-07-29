@@ -1,4 +1,5 @@
 import React from "react";
+import { BsLink45Deg } from "react-icons/bs";
 
 const Info = () => {
   return (
@@ -12,7 +13,9 @@ const Info = () => {
             dicta obcaecati.
           </div>
           <div>
-            <div className="link">x</div>
+            <div className="link">
+              <BsLink45Deg />
+            </div>
           </div>
         </div>
         <div className="event">
@@ -22,7 +25,9 @@ const Info = () => {
             dicta obcaecati.
           </div>
           <div>
-            <div className="link">x</div>
+            <div className="link">
+              <BsLink45Deg />
+            </div>
           </div>
         </div>
         <div className="event">
@@ -32,7 +37,9 @@ const Info = () => {
             dicta obcaecati.
           </div>
           <div>
-            <div className="link">x</div>
+            <div className="link">
+              <BsLink45Deg />
+            </div>
           </div>
         </div>
         <div className="event">
@@ -42,7 +49,9 @@ const Info = () => {
             dicta obcaecati.
           </div>
           <div>
-            <div className="link">x</div>
+            <div className="link">
+              <BsLink45Deg />
+            </div>
           </div>
         </div>
       </div>

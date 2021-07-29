@@ -8,3 +8,9 @@ export const formatNumber = (number) => {
   const result = formatter.format(number);
   return result;
 };
+
+export const sortTitle = (data, search) => {
+  return data?.filter((data) =>
+    data?.name.toLowerCase().includes(search.toLowerCase())
+  );
+};
