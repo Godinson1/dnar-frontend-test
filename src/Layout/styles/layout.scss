@@ -44,6 +44,21 @@
     height: 100%;
     margin-left: 100px;
 
+    .datepicker {
+      border: thin solid rgb(49, 48, 48);
+      height: 50px;
+      width: 300px;
+      border-radius: 15px;
+      padding: 5px 5px 5px 10px;
+      @include flex-center;
+      margin-left: 30px;
+      cursor: pointer;
+    }
+
+    .datepicker > * + * {
+      margin: 0 0 0 10px;
+    }
+
     .search__container {
       border: thin solid rgb(49, 48, 48);
       height: 50px;
@@ -115,7 +130,6 @@
             border-radius: 12px;
             padding: 20px;
             background-color: $secondary-color;
-            border-left: 3px solid $border-gray;
             margin-top: 20px;
             @include flex-between;
           }

@@ -19,7 +19,7 @@
   }
 
   div:nth-child(2) {
-    background-color: $link-base-color;
+    background-color: $white-color;
     margin-left: 10px;
   }
 
@@ -150,11 +150,21 @@
   background-color: $primary-color;
   padding: 20px;
   border-radius: 10px;
-  height: 270px;
+  height: 280px;
   overflow-x: hidden;
   position: relative;
   @include borderBox;
+  overflow: hidden;
 }
 .content__div__border > * + * {
   margin: 10px 0 0 0;
+}
+
+.custom__dropdown {
+  padding: 10px;
+  background-color: #1b1821;
+  border-radius: 15px;
+  @include flex-between;
+
+  gap: 10px;
 }

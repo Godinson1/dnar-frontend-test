@@ -18,6 +18,7 @@ const MarketLeaders = ({ details }) => {
             const { name, symbol, current_price } = data;
             return (
               <div className="coin__container">
+                <div className="border__left"></div>
                 <div>
                   {name} (<span className="text__upper">{symbol}</span>)
                 </div>

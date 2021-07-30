@@ -1,13 +1,13 @@
 import React from "react";
 import { MdTrendingUp } from "react-icons/md";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { formatNumber } from "../../utils";
 import { Line } from "react-chartjs-2";
 
 import "./styles/analytic.scss";
 
 const Chart = () => {
-  const details = useSelector((state) => state.details);
+  // const details = useSelector((state) => state.details);
 
   const labels = [
     "Nov",
@@ -37,7 +37,7 @@ const Chart = () => {
   return (
     <div className="chart">
       <h4>
-        {formatNumber(29039495)} &nbsp; &nbsp;&nbsp;{" "}
+        {formatNumber(29800.65)} &nbsp; &nbsp;&nbsp;{" "}
         <span className="chart__price">
           +2.43% &nbsp; <MdTrendingUp size={20} />
         </span>

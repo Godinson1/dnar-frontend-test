@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { MdLineWeight, MdEqualizer } from "react-icons/md";
 import { IoReorderTwo } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 import { api } from "../Setup";
 import {
@@ -43,7 +44,14 @@ const Layout = ({ children }) => {
         <div className="toggler" onClick={() => setSidebarOpen(true)}>
           <IoReorderTwo size={30} spacing={20} color="#4b6fe2" />
         </div>
-        <div className="sidebar__container">
+        <motion.div
+          className="sidebar__container"
+          initial={{ x: 0 }}
+          transition={{ duration: 0.5 }}
+          animate={{
+            x: 0,
+          }}
+        >
           <NavLink
             className="navlink"
             exact
@@ -64,7 +72,7 @@ const Layout = ({ children }) => {
               <MdEqualizer size={30} />
             </div>
           </NavLink>
-        </div>
+        </motion.div>
       </div>
       {children}
     </div>
