@@ -24,6 +24,11 @@ const Analytics = () => {
           </div>
           <InfoCard />
         </div>
+        <div className="box__container">
+          <div className="border__left"></div>
+          hehkhnfczs cksfjckbs,b k knkshfnbsfsf sjfbskfbj,kbfsf fkhfbksbjsf
+          jsljfb
+        </div>
       </div>
     </Layout>
   );

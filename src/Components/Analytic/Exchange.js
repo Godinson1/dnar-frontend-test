@@ -4,7 +4,7 @@ import { MdTrendingFlat } from "react-icons/md";
 const Exchange = () => {
   return (
     <div className="exchange">
-      <div className="content__div exchange_calc">
+      <div className="content__div__border exchange_calc">
         <h3>Exchange</h3>
         <div className="exchange_calc__container">
           <div className="exchange__flex">
@@ -30,7 +30,8 @@ const Exchange = () => {
           </div>
         </div>
       </div>
-      <div className="content__div alexa">
+      <div className="content__div__border alexa">
+        <div className="border__left"></div>
         <h3>Alexa Rank</h3>
         <div>9440</div>
       </div>

@@ -1,29 +1,5 @@
 @import "./variables";
 
-@mixin loader {
-  div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border: 4px solid $secondary-color;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: $secondary-color transparent transparent transparent;
-
-    &:nth-child(1) {
-      animation-delay: -0.45s;
-    }
-    &:nth-child(2) {
-      animation-delay: -0.3s;
-    }
-    &:nth-child(3) {
-      animation-delay: -0.15s;
-    }
-  }
-}
-
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -48,150 +24,14 @@
   align-items: flex-start;
 }
 
-@mixin custom-border-radius {
-  padding: 15px 20px 15px 20px;
-  border-bottom-right-radius: 7px;
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-}
-
-@mixin flex-bottom-card {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 50px;
-  margin-top: 20px;
-  @include flex-center;
-  cursor: pointer;
-  border-top: 1px solid rgb(182, 181, 181);
-}
-
-@mixin overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0 50px 0 70px;
-}
-
-@mixin main-modal {
-  @include overlay;
-  @include flex-center;
-  height: 100vh;
-  position: fixed;
-  z-index: 17;
-  overflow: hidden;
-}
-
-@mixin custom-button {
-  @include custom-border-radius;
-  background-color: $secondary-color;
-  color: $primary-color;
-  cursor: pointer;
-  outline: none;
-  border: none;
-
-  &:hover {
-    background-color: $background-color;
-  }
-
-  &:focus {
-    outline: none;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-  }
-}
-
-@mixin auth-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  @include flex-center;
-  flex-direction: column;
-  overflow: auto;
-  overflow-x: hidden;
-}
-
-@mixin image-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@mixin avatar {
-  border-radius: 50px;
-  background-color: $secondary-color;
-  margin-top: 5px;
-}
-
-@mixin avatar-image {
-  @include avatar;
-  cursor: pointer;
-  overflow: hidden;
-  img {
-    @include image-cover;
-  }
-}
-
-@mixin custom-sidebar {
-  height: 100vh;
-  background-color: $background-color;
-  position: fixed;
-  left: 0;
-  z-index: 3;
-  top: 0;
-  transition: width 200ms ease-in-out;
-  font-size: 1.1rem;
-  font-weight: bold;
-  padding: 15px 20px 50px 20px;
-
-  .header {
-    @include flex-center;
-    flex-direction: column;
-    #white {
-      color: $primary-color;
-      cursor: pointer;
-    }
-  }
-}
-
-@mixin auth-options {
-  @include flex-start-center;
-  gap: 20px;
-  font-weight: 500;
-  font-size: 1.1rem;
-  border: 1px solid $secondary-color;
-  width: 500px;
-  @include custom-border-radius;
-  margin-top: 15px;
-  cursor: pointer;
-  #icon {
-    font-size: 1.3rem;
-  }
-}
-
-@mixin custom-navbar {
-  width: 100%;
-  height: 70px;
-  background-color: white;
-  box-shadow: rgba(79, 79, 79, 0.07) 0px 4px 10px;
-  position: fixed;
-  transition: width 200ms ease-in-out;
-  overflow: hidden;
-  @include flex-between;
-
-  .header {
-    height: 100%;
-    @include flex-start-center;
-    gap: 10px;
-    padding-left: 10px;
-    cursor: pointer;
-    color: $secondary-color;
+@mixin borderBox {
+  .border__left {
+    background-color: $light-secondary;
+    width: 4px;
+    height: 25px;
+    left: -1px;
+    top: 3px;
+    border-radius: 5px;
+    position: absolute;
   }
 }

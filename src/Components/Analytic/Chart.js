@@ -9,8 +9,6 @@ import "./styles/analytic.scss";
 const Chart = () => {
   const details = useSelector((state) => state.details);
 
-  console.log(details);
-
   const labels = [
     "Nov",
     "Dec",
@@ -26,12 +24,12 @@ const Chart = () => {
     "Oct",
   ];
   const data = {
-    labels: labels,
+    labels,
     datasets: [
       {
         label: "$93773.0",
-        backgroundColor: "rgb(255, 99, 132)",
-        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "#4b6fe2",
+        borderColor: "#4b6fe2",
         data: [0, 10, 5, 2, 20, 30, 45],
       },
     ],
@@ -45,7 +43,7 @@ const Chart = () => {
         </span>
       </h4>
       <div className="coin__leaders">
-        <Line data={data} height={100} />
+        <Line color="#7a33ef" data={data} height={100} />
       </div>
     </div>
   );
