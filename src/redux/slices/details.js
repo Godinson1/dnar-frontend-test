@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   allCoins: [],
   marketLeaders: [],
-  isLoading: false,
-  isPaymentLoading: false,
+  isMarketLeadersLoading: false,
+  isAllCoinsLoading: false,
   status: false,
   showBalanceStatus: false,
   error: "",
@@ -41,6 +41,14 @@ const details = createSlice({
       state.isLoading = action.payload;
       return state;
     },
+    setMarketLeadersLoading: (state, action) => {
+      state.isMarketLeadersLoading = action.payload;
+      return state;
+    },
+    setAllCoinsLoading: (state, action) => {
+      state.isAllCoinsLoading = action.payload;
+      return state;
+    },
   },
 });
 
@@ -49,6 +57,8 @@ export const {
   setMarketLeaders,
   setStatus,
   setUserSuccess,
+  setMarketLeadersLoading,
+  setAllCoinsLoading,
   setLoading,
 } = details.actions;
 

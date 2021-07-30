@@ -1,6 +1,7 @@
 import React from "react";
 import { MdTrendingFlat } from "react-icons/md";
 import { IoChevronDown } from "react-icons/io5";
+import { Icon } from "../../utils";
 
 const Exchange = () => {
   return (
@@ -16,9 +17,7 @@ const Exchange = () => {
             </div>
             <div className="custom__dropdown">
               <div> USD</div>
-              <div>
-                <IoChevronDown size={20} color="#7a33ef" />
-              </div>
+              <Icon icon={<IoChevronDown size={20} color="#7a33ef" />} />
             </div>
           </div>
           <div className="exchange__flex">
@@ -28,9 +27,7 @@ const Exchange = () => {
             </div>
             <div className="custom__dropdown">
               <div> BTC</div>
-              <div>
-                <IoChevronDown size={20} color="#7a33ef" />
-              </div>
+              <Icon icon={<IoChevronDown size={20} color="#7a33ef" />} />
             </div>
           </div>
           <div className="exchange__flex">

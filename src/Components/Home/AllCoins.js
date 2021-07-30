@@ -9,7 +9,7 @@ const AllCoins = () => {
     <div className="content__div all__coins">
       <h3>All Coins</h3>
       <div className="all__coins__container">
-        {details.isLoading ? (
+        {details.isAllCoinsLoading ? (
           <Loader />
         ) : (
           details.allCoins &&

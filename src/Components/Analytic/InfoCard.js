@@ -23,7 +23,7 @@ const InfoCard = () => {
             <IoLogoReddit size={25} color="#e86a48" />
           </div>
           <div className="link_holder">
-            <IoLogoGithub size={25} />
+            <IoLogoGithub size={25} color="black" />
           </div>
         </div>
         <div className="info__fact">

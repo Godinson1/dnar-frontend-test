@@ -4,6 +4,7 @@ import { MdSearch } from "react-icons/md";
 import { IoCalendarOutline, IoChevronDown } from "react-icons/io5";
 
 import Layout from "../../Layout";
+import { Icon } from "../../utils";
 import { Chart, InfoCard, Exchange } from "./index";
 
 const Analytics = () => {
@@ -22,13 +23,9 @@ const Analytics = () => {
                 </div>
               </div>
               <div className="datepicker">
-                <div>
-                  <IoCalendarOutline size={20} color="#7a33ef" />
-                </div>
+                <Icon icon={<IoCalendarOutline size={20} color="#7a33ef" />} />
                 <div>Nov 2020 - July 2021 </div>
-                <div>
-                  <IoChevronDown size={20} color="#7a33ef" />
-                </div>
+                <Icon icon={<IoChevronDown size={20} color="#7a33ef" />} />
               </div>
             </div>
             <Chart />

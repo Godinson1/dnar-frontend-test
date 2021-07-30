@@ -7,6 +7,8 @@ import {
   setStatus,
   setUserSuccess,
   setLoading,
+  setMarketLeadersLoading,
+  setAllCoinsLoading,
 } from "./slices/details";
 import { getAllCoinsAndSymbol, getCoinMarkets } from "./actions/details";
 export {
@@ -21,4 +23,6 @@ export {
   setLoading,
   getAllCoinsAndSymbol,
   getCoinMarkets,
+  setMarketLeadersLoading,
+  setAllCoinsLoading,
 };
